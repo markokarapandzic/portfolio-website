@@ -1,7 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "Portofolio website to show of my skills and connect with people",
+  "description": "Portfolio website to show of my skills and connect with people",
   "main": "index.js",
   "scripts": {
     "start": "lite-server",
