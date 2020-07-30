@@ -80,6 +80,7 @@ scrollLinks.forEach(link => {
 
 const logoBtn = document.querySelector('.logo-btn');
 logoBtn.addEventListener('click', () => {
+  removeShowLinks();
   window.scrollTo({
     left: 0,
     top: 0,
