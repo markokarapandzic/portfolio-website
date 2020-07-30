@@ -11,7 +11,9 @@
   <link rel="manifest" href="./images/favicon.ico/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- inject:css -->
   <link rel="stylesheet" href="./styles.css">
+  <!-- endinject -->
 
   <title>Marko Karapandzic</title>
 </head>
@@ -24,8 +26,14 @@
 
   <div class="container">
     <header class="header">
-      <img src="images/defalt-logo.png" alt="logo" class="logo" />
-      <img src="./images/menu-icon.svg" alt="menu" class="header-icon menu-btn">
+      <div class="nav-header">
+        <button class="logo-btn">
+          <img src="images/defalt-logo.png" alt="logo" class="logo" />
+        </button>
+        <button class="menu-btn">
+          <img src="./images/menu-icon.svg" alt="menu" class="header-icon">
+        </button>
+      </div>
       <div class="nav-links">
         <a href="#about-section" class="nav-link">
           <p>About Me</p>
@@ -230,18 +238,22 @@
 
     <footer class="footer">
       <div class="social-icons">
-        <a href="https://github.com/markokarapandzic" target="_blank">
+        <a href="https://github.com/markokarapandzic" target="_blank" rel="noopener">
           <img src="./images/github-icon.png" alt="github icon">
         </a>
-        <a href="https://linkedin.com/in/marko-karapandzic-1aaa81130" target="_blank">
+        <a href="https://linkedin.com/in/marko-karapandzic-1aaa81130" target="_blank" rel="noopener">
           <img src="./images/linkedin-icon.png" alt="linkedin icon">
         </a>
-        <a href="https://codepen.io/MasterSensei" target="_blank">
+        <a href="https://codepen.io/MasterSensei" target="_blank" rel="noopener">
           <img src="./images/codepen-icon.png" alt="codepen icon">
         </a>
       </div>
       <p>Designed & Built by Marko Karapandzic</p>
     </footer>
   </div>
+
+  <!-- inject:js -->
+  <script src="./main.js"></script>
+  <!-- endinject -->
 </body>
 </html>

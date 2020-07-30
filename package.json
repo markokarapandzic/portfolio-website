@@ -6,7 +6,7 @@
   "scripts": {
     "start": "lite-server",
     "deploy": "gh-pages -d dist",
-    "build": "webpack --config webpack.config.js"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,11 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-image": "^6.2.1"
+    "gulp-debug": "^4.0.0",
+    "gulp-image": "^6.2.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-uglify-es": "^2.0.0"
   }
 }
