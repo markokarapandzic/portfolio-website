@@ -893,3 +893,10 @@ p {
     padding: 0 10%;
   }
 }
+
+@media screen and (min-width: 480px) and (max-width: 800px) {
+  .project {
+    position: relative;
+    height: 550px;
+  }
+}
