@@ -11,6 +11,7 @@
   <link rel="manifest" href="./images/favicon.ico/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <!-- inject:css -->
   <link rel="stylesheet" href="./styles.css">
   <!-- endinject -->
@@ -31,7 +32,7 @@
           <img src="images/defalt-logo.png" alt="logo" class="logo" />
         </button>
         <button class="menu-btn">
-          <img src="./images/menu-icon.svg" alt="menu" class="header-icon">
+          <i class="fas fa-bars fa-3x header-icon"></i>
         </button>
       </div>
       <div class="nav-links">
@@ -127,8 +128,8 @@
               <div class="project-header">
                 <h3 class="project-title">Calm Space</h3>
                 <div class="project-icons">
-                  <img src="./images/github-icon.png" alt="github code icon">
-                  <img src="./images/open-project-icon.png" alt="open project icon">
+                  <i class="fab fa-github fa-2x project-icon"></i>
+                  <i class="fas fa-external-link-alt fa-2x project-icon"></i>
                 </div>
               </div>
               <p class="project-desc">Lorem ipsum dolor sit amet,
@@ -152,8 +153,8 @@
               <div class="project-header">
                 <h3 class="project-title">Stock Recommender</h3>
                 <div class="project-icons">
-                  <img src="./images/github-icon.png" alt="github code icon">
-                  <img src="./images/open-project-icon.png" alt="open project icon">
+                  <i class="fab fa-github fa-2x project-icon"></i>
+                  <i class="fas fa-external-link-alt fa-2x project-icon"></i>
                 </div>
               </div>
               <p class="project-desc">Lorem ipsum dolor sit amet,
@@ -238,14 +239,15 @@
 
     <footer class="footer">
       <div class="social-icons">
+        <i id="theme-toggle" class="fas fa-sun fa-2x sidebar-btn"></i>
         <a href="https://github.com/markokarapandzic" target="_blank" rel="noopener">
-          <img src="./images/github-icon.png" alt="github icon">
+          <i class="fab fa-github fa-2x sidebar-btn"></i>
         </a>
         <a href="https://linkedin.com/in/marko-karapandzic-1aaa81130" target="_blank" rel="noopener">
-          <img src="./images/linkedin-icon.png" alt="linkedin icon">
+          <i class="fab fa-linkedin-in fa-2x sidebar-btn"></i>
         </a>
         <a href="https://codepen.io/MasterSensei" target="_blank" rel="noopener">
-          <img src="./images/codepen-icon.png" alt="codepen icon">
+          <i class="fab fa-codepen fa-2x sidebar-btn"></i>
         </a>
       </div>
       <p>Designed & Built by Marko Karapandzic</p>
@@ -253,7 +255,7 @@
   </div>
 
   <!-- inject:js -->
-  <script src="./main.js"></script>
+  <script src="./all.js"></script>
   <!-- endinject -->
 </body>
 </html>
