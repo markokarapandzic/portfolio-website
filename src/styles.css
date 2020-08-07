@@ -1,17 +1,47 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: 
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
 
 :root {
+  --clr-background: #121212;
   --clr-grey-light: #B7B7B7;
   --clr-blue-light-accent: #8AA3C5;
+  --clr-title: white;
+  --clr-icons: white;
+  --clr-menu-icon: white;
+  --clr-navbar-fixed: white;
+  --clr-navbar-links: black;
+  --clr-project-background: rgba(138, 163, 197, 0.15);
+  --clr-project-tag-background: rgba(138, 163, 197, 0.25);
+  --clr-project-tag-background-desktop: rgba(138, 163, 197, 0.15);
+  --clr-project-tag-text: #8AA3C5;
+  --clr-project-title: white;
+  --clr-project-description: #B7B7B7;
+  --clr-project-description-desktop: #B7B7B7;
+  --clr-project-icons: white;
+  --clr-project-icons-desktop: white;
   --base-padding: 5%;
   --transition: all 0.3s linear;
+}
+
+:root.light-theme {
+  --clr-background: white;
+  --clr-grey-light: #4a4a4a;
+  --clr-blue-light-accent: #8AA3C5;
+  --clr-title: black;
+  --clr-icons: black;
+  --clr-navbar-fixed: #121212;
+  --clr-menu-icon: black;
+  --clr-navbar-links: white;
+  --clr-project-background: #121212;
+  --clr-project-tag-background: white;
+  --clr-project-tag-background-desktop: rgba(138, 163, 197, 1);
+  --clr-project-tag-text: black;
+  --clr-project-tag-text-desktop: white;
+  --clr-project-title: black;
+  --clr-project-title-desktop: white;
+  --clr-project-description: black;
+  --clr-project-description-desktop: #B7B7B7;
+  --clr-project-icons: black;
+  --clr-project-icons-desktop: white;
 }
 
 *,
@@ -29,7 +59,7 @@ html {
 
 body {
   font-family: 'Fira Code', monospace;
-  background: black;
+  background: var(--clr-background);
   color: var(--clr-grey-light);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -67,7 +97,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   font-weight: 300;
-  color: white;
+  color: var(--clr-title);
 }
 
 h1 {
@@ -91,6 +121,15 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-light);
   font-weight: 300;
+}
+
+.sidebar-btn {
+  color: var(--clr-icons);
+}
+
+.sidebar-btn:hover {
+  cursor: pointer;
+  opacity: 0.3;
 }
 
 .right-side-email {
@@ -117,6 +156,7 @@ p {
 
 .header-icon {
   height: 40px;
+  color: var(--clr-menu-icon);
 }
 
 .logo {
@@ -159,12 +199,12 @@ p {
   align-items: flex-end;
   justify-content: flex-start;
   height: auto;
-  background-color: white;
+  background-color: var(--clr-navbar-fixed);
   animation: ease-in 3s linear;
 }
 
 .show-links p {
-  color: black;
+  color: var(--clr-navbar-links);
 }
 
 .resume-btn {
@@ -182,12 +222,12 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: var(--clr-navbar-fixed);
   z-index: 100;
 }
 
 .fixed-nav p {
-  color: black;
+  color: var(--clr-navbar-links);
 }
 
 /* Main Content */
@@ -330,6 +370,10 @@ p {
   width: 90%;
 }
 
+.project-title {
+  color: var(--clr-project-title);
+}
+
 .project-data img {
   opacity: 1;
 }
@@ -345,17 +389,22 @@ p {
   align-items: center;
 }
 
-.project-icons img:hover {
+.project-icons i:hover {
   opacity: 0.3;
   cursor: pointer;
 }
 
-.project-icons img:nth-child(1) {
-  margin-right: 10px;
+.project-icons i:nth-child(1) {
+  margin-right: 15px;
+}
+
+.project-icon {
+  color: var(--clr-project-icons);
 }
 
 .project-desc {
   text-align: justify;
+  color: var(--clr-project-description);
 }
 
 .project-tags {
@@ -371,7 +420,7 @@ p {
   justify-content: center;
   height: 4rem;
   width: auto;
-  background-color: rgba(138, 163, 197, 0.25);
+  background-color: var(--clr-project-tag-background);
   border-radius: 2rem;
   padding: 0 1rem;
 }
@@ -382,7 +431,7 @@ p {
 
 .tag p {
   margin: 0;
-  color: var(--clr-blue-light-accent);
+  color: var(--clr-project-tag-text);
   opacity: 1;
 }
 
@@ -509,8 +558,8 @@ p {
   width: auto;
 }
 
-.social-icons a:not(:last-child) {
-  padding-right: 1rem;
+.social-icons > *:not(:last-child) {
+  padding-right: 2rem;
 }
 
 .intro-image-logo {
@@ -567,8 +616,8 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 5vh;
-    padding: 3%;
+    height: 3vh;
+    padding: 35px 3%;
   }
 
   .intro-section {
@@ -714,7 +763,7 @@ p {
     justify-content: center;
     height: 300px;
     width: 100%;
-    background-color: rgba(138, 163, 197, 0.15);
+    background-color: var(--clr-project-background);
     border-radius: 1rem;
   }
 
@@ -755,6 +804,15 @@ p {
 
   .project-desc {
     margin: 0;
+    color: var(--clr-project-description-desktop);
+  }
+
+  .project-title {
+    color: var(--clr-project-title-desktop);
+  }
+
+  .project-icon {
+    color: var(--clr-project-icons-desktop);
   }
 
   .tag {
@@ -763,9 +821,13 @@ p {
     justify-content: center;
     height: 1.2rem;
     width: auto;
-    background-color: rgba(138, 163, 197, 0.25);
+    background-color: var(--clr-project-tag-background-desktop);
     border-radius: 2rem;
     padding: 0 1rem;
+  }
+
+  .tag p {
+    color: var(--clr-project-tag-text-desktop);
   }
 
   .tag:not(:last-child) {
@@ -865,7 +927,7 @@ p {
     width: auto;
   }
   
-  .social-icons a:not(:last-child) {
+  .social-icons > *:not(:last-child) {
     padding-bottom: 1rem;
     padding-right: 0;
   }

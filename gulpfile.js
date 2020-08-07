@@ -5,6 +5,7 @@ const image = require('gulp-image');
 const inject = require('gulp-inject');
 const clean = require('gulp-clean');
 const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 
 function preBuild() {
   return src('./dist/', { read: false })
@@ -13,7 +14,7 @@ function preBuild() {
 
 function moveIndexHTML() {
   return src('./src/index.html')
-    .pipe(inject(src(['./src/**/*.css', './src/**/*.js'], { read: false }), { addRootSlash: true, relative: true }))
+    .pipe(inject(src(['./dist/**/*.css', './dist/**/*.js'], { read: false }), { addRootSlash: true, relative: true }))
     .pipe(dest('dist/'));
 }
 
@@ -37,6 +38,7 @@ function moveFaviconFolder() {
 
 function minifyJS() {
   return src('./src/**/*.js')
+    .pipe(concat('all.js'))
     .pipe(uglify())
     .pipe(dest('./dist/'));
 }
