@@ -1,0 +1,85 @@
+{
+  "short_name": "Marko K.",
+  "name": "Marko Karapandzic",
+  "lang": "en",
+  "description": "Web App to showcase my skills and connect with people.",
+  "start_url": "/index.html",
+  "background_color": "#121212",
+  "theme_color": "#FFF",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": [
+   {
+    "src": "/images/favicon.ico/pwa-512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+   },
+   {
+    "src": "/images/favicon.ico/pwa-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+   },
+   {
+    "src": "/images/favicon.ico/android-144x144.png",
+    "type": "image/png",
+    "sizes": "144x144"
+   },
+   {
+    "src": "/images/favicon.ico/android-96x96.png",
+    "type": "image/png",
+    "sizes": "96x96"
+   },
+   {
+    "src": "/images/favicon.ico/android-72x72.png",
+    "type": "image/png",
+    "sizes": "72x72"
+   },
+   {
+    "src": "/images/favicon.ico/android-48x48.png",
+    "type": "image/png",
+    "sizes": "48x48"
+   },
+   {
+    "src": "/images/favicon.ico/android-36x36.png",
+    "type": "image/png",
+    "sizes": "36x36"
+   },
+   {
+    "src": "/images/favicon.ico/apple-touch-icon-180x180.png",
+    "type": "image/png",
+    "sizes": "180x180"
+   },
+   {
+    "src": "/images/favicon.ico/tile128x128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+   },
+   {
+    "src": "/images/favicon.ico/tile270x270.png",
+    "type": "image/png",
+    "sizes": "270x270"
+   },
+   {
+    "src": "/images/favicon.ico/tile558x270.png",
+    "type": "image/png",
+    "sizes": "558x270"
+   },
+   {
+    "src": "/images/favicon.ico/tile558x558.png",
+    "type": "image/png",
+    "sizes": "558x558"
+   },
+   {
+    "src": "/images/favicon.ico/favicon.ico",
+    "type": "image/png",
+    "sizes": "16x16"
+   },
+   {
+    "src": "/images/favicon.ico/maskable_icon.png",
+    "sizes": "1024x1024",
+    "type": "image/png",
+    "purpose": "any maskable"
+    }
+  ]
+ }
