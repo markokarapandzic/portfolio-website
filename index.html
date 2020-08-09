@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.ico/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.ico/favicon-16x16.png">
-  <link rel="manifest" href="./images/favicon.ico/site.webmanifest">
+  <link rel="icon" type="image/png" href="./images/favicon.ico/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="./images/favicon.ico/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./images/favicon.ico/android-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./images/favicon.ico/apple-touch-icon-180x180.png" sizes="180x180">
+  <meta name="msapplication-config" content="./images/favicon.ico/browserconfig.xml">
+
   <meta name="theme-color" content="#ffffff">
+
+  <link rel="manifest" type="application/manifest+json" href="./manifest.webmanifest">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <!-- inject:css -->
@@ -48,7 +52,7 @@
         <a href="#contact-section" class="nav-link">
           <p>Contact</p>
         </a>
-        <a href="#" class="resume-btn">Resume</a>
+        <a href="./assets/resume.pdf" class="resume-btn" download="">Resume</a>
       </div>
     </header>
 
@@ -62,11 +66,11 @@
           <p class="title-description">I’m a software engineer based
             in Novi Sad, Serbia
             specializing in creating
-            inconsistent websites, 
+            remarkable websites, 
             applications, 
             and everything tech.
           </p>
-          <a href="#" class="reach-me-btn">Reach Me</a>
+          <a href="mailto:karapandzicmarko1@gmail.com" class="reach-me-btn">Reach Me</a>
           <div class="scroll-container">
             <img src="./images/scroll-gesture.png" alt="scroll gesture" class="scroll-gesture-img">
           </div>
@@ -233,7 +237,7 @@
           so feel free to get in touch 
           with me.
         </p>
-        <a href="#" class="reach-me-btn">Reach Me</a>
+        <a href="mailto:karapandzicmarko1@gmail.com" class="reach-me-btn">Reach Me</a>
       </section>
     </main>
 
@@ -256,6 +260,7 @@
 
   <!-- inject:js -->
   <script src="./all.js"></script>
+  <script src="./service-worker.js"></script>
   <!-- endinject -->
 </body>
 </html>
