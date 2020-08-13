@@ -37,6 +37,11 @@ function moveFaviconFolder() {
     .pipe(dest('dist/images/favicon.ico/'));
 }
 
+function moveAssets() {
+  return src('./src/assets/*')
+    .pipe(dest('dist/assets/'));
+}
+
 function moveManifest() {
   return src('./src/manifest.webmanifest')
     .pipe(dest('dist/'));
@@ -63,5 +68,6 @@ exports.default = series(
   compressImages,
   moveFaviconFolder,
   moveManifest,
+  moveAssets,
   moveIndexHTML,
 );
