@@ -6,11 +6,11 @@ window.addEventListener('scroll', () => {
   const scrollHeight = window.pageYOffset;
   const headerHight = header.getBoundingClientRect().height;
 
-  if (scrollHeight > headerHight) {
+  if (scrollHeight > headerHight && !header.classList.contains('fixed-nav')) {
     header.classList.add('fixed-nav');
     logo.src = LOGO_ICON_BLACK;
     changeMenuIconColor(FIXED_NAVBAR_ACTIVE);
-  } else {
+  } else if (scrollHeight <= headerHight && header.classList.contains('fixed-nav')) {
     header.classList.remove('fixed-nav');
     logo.src = LOGO_ICON_WHITE;
     changeMenuIconColor(FIXED_NAVBAR_INACTIVE);
