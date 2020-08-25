@@ -34,6 +34,16 @@
 
   <link rel="manifest" type="application/manifest+json" href="./manifest.webmanifest">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GX591W4V3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2GX591W4V3');
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <!-- inject:css -->
   <link rel="stylesheet" href="./styles.css">
@@ -144,59 +154,32 @@
         <h1 class="projects-title">My Projects</h1>
         <div class="projects-container">
           <div class="project">
-            <img data-src="./images/project-one-image.jpg" alt="project one">
+            <img data-src="./images/fin-calc-project.png" alt="financial calculators project">
             <div class="project-data">
               <div class="project-header">
-                <h3 class="project-title">Calm Space</h3>
+                <h3 class="project-title">Financial Calculators</h3>
                 <div class="project-icons">
-                  <i class="fab fa-github fa-2x project-icon"></i>
-                  <i class="fas fa-external-link-alt fa-2x project-icon"></i>
+                  <a href="https://github.com/markokarapandzic/financial-calculator">
+                    <i class="fab fa-github fa-2x project-icon"></i>
+                  </a>
+                  <a href="https://financial-calculators.netlify.app/">
+                    <i class="fas fa-external-link-alt fa-2x project-icon"></i>
+                  </a>
                 </div>
               </div>
-              <p class="project-desc">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-                Pellentesque quis tellus nulla. Nulla
-                tristique nec mauris id sollicitudin.
-                Nunc eget fringilla ligula. Nullam
-                rhoncus dui ipsum, ornare fermentum 
-                ipsum luctus ut.
+              <p class="project-desc">The project enables people to calculate all of there financial needs in one place. You can use several different financial calculators, like Mortgage, Loan, Interest, Return on Investment, and Salary calculators
               </p>
               <div class="project-tags">
-                <div class="tag"><p>React</p></div>
-                <div class="tag"><p>Redux</p></div>
-                <div class="tag"><p>Jest</p></div>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <img data-src="./images/project-two-image.jpg" alt="project one">
-            <div class="project-data">
-              <div class="project-header">
-                <h3 class="project-title">Stock Recommender</h3>
-                <div class="project-icons">
-                  <i class="fab fa-github fa-2x project-icon"></i>
-                  <i class="fas fa-external-link-alt fa-2x project-icon"></i>
-                </div>
-              </div>
-              <p class="project-desc">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-                Pellentesque quis tellus nulla. Nulla
-                tristique nec mauris id sollicitudin.
-                Nunc eget fringilla ligula. Nullam
-                rhoncus dui ipsum, ornare fermentum 
-                ipsum luctus ut.
-              </p>
-              <div class="project-tags">
-                <div class="tag"><p>React</p></div>
-                <div class="tag"><p>Redux</p></div>
-                <div class="tag"><p>TensorFlow</p></div>
+                <div class="tag"><p>JavaScript</p></div>
+                <div class="tag"><p>Gulp</p></div>
+                <div class="tag"><p>Netlify</p></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="btn-container">
+        <!-- <div class="btn-container">
           <a href="#" class="more-btn">More</a>
-        </div>
+        </div> -->
       </section>
 
       <section class="books-section" id="books-section">
