@@ -1,14 +1,9 @@
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
-const resumeBtn = document.querySelector('.resume-btn');
-const navBtns = document.querySelectorAll('.nav-link');
-const header = document.querySelector('header');
-const menuIcon = document.querySelector('.header-icon');
-const logo = document.querySelector('.logo');
-
-const LIGHT_THEME_CLASS = 'light-theme';
-const LOGO_ICON_WHITE = './images/defalt-logo.png';
-const LOGO_ICON_BLACK = './images/defalt-logo-black.png';
+import setup from './startUp.js';
+import fixedNav from './fixed-nav.js';
+import lazyLoading from './lazy-loading.js';
+import { themeBtnListener } from './dark-theme.js'
+import { menuBtnListener, resumeBtnListener, navBtnsListener } from './mobile-menu.js';
+import { scrollingLinks, logoBtnListener } from './scrolling.js';
 
 // Service Worker
 if ('serviceWorker' in navigator) {
@@ -21,3 +16,19 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+
+setup();
+fixedNav();
+lazyLoading();
+
+// Theme Config
+themeBtnListener();
+
+// Mobile Menu Config
+menuBtnListener();
+resumeBtnListener();
+navBtnsListener();
+
+// Scrolling Config
+scrollingLinks();
+logoBtnListener();
