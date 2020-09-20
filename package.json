@@ -6,7 +6,8 @@
   "scripts": {
     "start": "lite-server",
     "deploy": "gh-pages -d dist",
-    "build": "gulp"
+    "build": "gulp",
+    "webpack": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
     "gulp-debug": "^4.0.0",
     "gulp-image": "^6.2.1",
     "gulp-inject": "^5.0.5",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify-es": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }

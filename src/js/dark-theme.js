@@ -2,6 +2,7 @@ import { LIGHT_THEME_CLASS, FIXED_NAVBAR_ACTIVE, FIXED_NAVBAR_INACTIVE } from '.
 import { changeMenuIconColor } from './fixed-nav.js';
 
 const themeBtn = document.getElementById('theme-toggle');
+const header = document.querySelector('.header');
 
 // Dark Theme
 export const themeBtnListener = () => themeBtn.addEventListener('click', () => {

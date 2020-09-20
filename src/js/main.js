@@ -17,6 +17,12 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Google Tag Config
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'G-2GX591W4V3');
+
 setup();
 fixedNav();
 lazyLoading();
