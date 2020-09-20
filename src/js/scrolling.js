@@ -1,7 +1,10 @@
+import { header } from './fixed-nav.js';
+import { navLinks, removeShowLinks } from './mobile-menu.js';
+
 // Smooth Scroll
 const scrollLinks = document.querySelectorAll('.nav-link');
 
-scrollLinks.forEach(link => {
+export const scrollingLinks = () => scrollLinks.forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
 
@@ -36,7 +39,7 @@ scrollLinks.forEach(link => {
 });
 
 const logoBtn = document.querySelector('.logo-btn');
-logoBtn.addEventListener('click', () => {
+export const logoBtnListener = () => logoBtn.addEventListener('click', () => {
   removeShowLinks();
   window.scrollTo({
     left: 0,

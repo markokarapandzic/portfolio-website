@@ -5,8 +5,8 @@ const image = require('gulp-image');
 const inject = require('gulp-inject');
 const clean = require('gulp-clean');
 const uglify = require('gulp-uglify-es').default;
-const concat = require('gulp-concat');
-const workboxBuild = require('workbox-build');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 
 function preBuild() {
   return src('./dist/', { read: false })
@@ -53,17 +53,26 @@ function moveServiceWorker() {
     .pipe(dest('dist/'));
 }
 
-function minifyJS() {
-  return src(['./src/**/*.js', '!./src/service-worker.js'])
-    .pipe(concat('all.js'))
-    .pipe(uglify())
-    .pipe(dest('./dist/'));
+function bundleJS() {
+  return new Promise((resolve, reject) => {
+    webpack(webpackConfig, (error, stats) => {
+      if (error) {
+        return reject(error);
+      }
+
+      if (stats.hasErrors()) {
+        return reject(new Error(stats.compilation.errors.join('\n')));
+      }
+
+      resolve();
+    })
+  });
 }
 
 exports.default = series(
   preBuild,
   minifyCSS,
-  minifyJS,
+  bundleJS,
   moveServiceWorker,
   compressImages,
   moveFaviconFolder,

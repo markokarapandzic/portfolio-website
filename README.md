@@ -10,7 +10,7 @@
 ### INTRODUCTION
 
 A Web App to showcase my skills and connect with people.
-This project is made with pure HTML, CSS, and JS. This App is responsive to Mobile Phones and passes all PWA tests.
+This project is made with pure HTML, CSS, and JS(Converted to ES6). This App is responsive to Mobile Phones and is PWA compatible.
 
 Check out a live version [here](https://markokarapandzic.github.io/portfolio-website/).
 
@@ -43,10 +43,11 @@ Go to the /dist folder and open the Index.html file in your browser to see the w
 Here is a list of technologies used to build this project.
 * HTML
 * CSS
-* Vanilla JavaScript
+* Vanilla JavaScript(Converted to ES6)
 * [Progressive Web App](https://web.dev/progressive-web-apps/)
-* [NPM](https://www.npmjs.com/) - Package Menagement
+* [NPM](https://www.npmjs.com/) - Package Management
 * [Gulp](https://gulpjs.com/) - Build
+* [Webpack](https://webpack.js.org/) - Module Bundler
 * [Git](https://git-scm.com/) - Version Control
 * [Github Pages](https://pages.github.com/) - Deployment
 

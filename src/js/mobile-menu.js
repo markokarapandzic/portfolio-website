@@ -1,18 +1,23 @@
+const menuBtn = document.querySelector('.menu-btn');
+export const navLinks = document.querySelector('.nav-links');
+const resumeBtn = document.querySelector('.resume-btn');
+const navBtns = document.querySelectorAll('.nav-link');
+
 // Handle Mobile Menu Display
-menuBtn.addEventListener('click', () => {
+export const menuBtnListener = () => menuBtn.addEventListener('click', () => {
   navLinks.classList.toggle('show-links');
 });
 
-resumeBtn.addEventListener('click', () => {
+export const resumeBtnListener = () => resumeBtn.addEventListener('click', () => {
   removeShowLinks()
 });
 
-navBtns.forEach(btn => {
+export const navBtnsListener = () => navBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     removeShowLinks()
   });
 });
 
-const removeShowLinks = () => {
+export const removeShowLinks = () => {
   navLinks.classList.remove('show-links');
 };

@@ -1,8 +1,10 @@
-// Display Fixed menu when Scrolling
-const FIXED_NAVBAR_ACTIVE = 1;
-const FIXED_NAVBAR_INACTIVE = 0;
+import { FIXED_NAVBAR_ACTIVE, FIXED_NAVBAR_INACTIVE, LOGO_ICON_BLACK, LOGO_ICON_WHITE, LIGHT_THEME_CLASS } from './constants.js'
 
-window.addEventListener('scroll', () => {
+export const header = document.querySelector('header');
+const logo = document.querySelector('.logo');
+const menuIcon = document.querySelector('.header-icon');
+
+export default () => window.addEventListener('scroll', () => {
   const scrollHeight = window.pageYOffset;
   const headerHight = header.getBoundingClientRect().height;
 
@@ -17,7 +19,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const changeMenuIconColor = (navbarStatus) => {
+export const changeMenuIconColor = (navbarStatus) => {
   const rootTag = document.childNodes[1];
 
   if (navbarStatus) {
