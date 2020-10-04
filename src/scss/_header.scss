@@ -1,0 +1,149 @@
+.header {
+  height: auto;
+  padding: 10px 5%;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-icon {
+  height: 40px;
+  color: var(--clr-menu-icon);
+}
+
+.logo {
+  height: 60px;
+}
+
+.menu-btn {
+  background: transparent;
+  border-color: transparent;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
+.logo-btn {
+  background: transparent;
+  border-color: transparent;
+}
+
+.logo-btn:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.nav-links {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+  padding: 10px 5%;
+}
+
+.show-links {
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: auto;
+  background-color: var(--clr-navbar-fixed);
+  animation: ease-in 3s linear;
+}
+
+.show-links p {
+  color: var(--clr-navbar-links);
+}
+
+.resume-btn {
+  width: auto;
+  border: 2px solid var(--clr-blue-light-accent);
+  border-radius: 7px;
+  color: var(--clr-blue-light-accent);
+  font-weight: 300;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--clr-navbar-fixed);
+  z-index: 100;
+}
+
+.fixed-nav p {
+  color: var(--clr-navbar-links);
+}
+
+@include tablet {
+  .menu-btn {
+    display: none;
+  }
+
+  .scroll-container {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 3vh;
+    padding: 35px 3%;
+  }
+
+  .nav-links {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .nav-link:not(:last-child) {
+    margin-right: 3rem;
+  }
+  
+  .nav-link p {
+    font-size: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .nav-link p:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
+
+  .resume-btn {
+    height: 100%;
+    border: 2px solid var(--clr-blue-light-accent);
+    border-radius: 7px;
+    color: var(--clr-blue-light-accent);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .resume-btn:hover {
+    animation: square-btn-animation 0.3s linear forwards;
+  }
+
+  .scroll-container {
+    display: none;
+  }  
+}
