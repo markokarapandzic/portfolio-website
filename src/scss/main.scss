@@ -1,0 +1,72 @@
+@import './utils';
+@import './variables';
+@import './config';
+@import './header';
+@import './main-content';
+@import './about';
+@import './projects';
+@import './books';
+@import './contact';
+
+.sidebar-btn {
+  color: var(--clr-icons);
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
+}
+
+.right-side-email {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+@include tablet {
+  .social-icons {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    align-items: center;
+  }
+  
+  .social-icons a:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  
+  .social-icons img {
+    max-height: 40px;
+    width: auto;
+  }
+  
+  .social-icons > *:not(:last-child) {
+    padding-bottom: 1rem;
+    padding-right: 0;
+  }
+
+  .right-side-email {
+    display: initial;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translate(30%, -50%) rotate(90deg);
+  }
+
+  .right-side-email a p:hover {
+    cursor: pointer;
+    opacity: 0.3;
+  }
+}

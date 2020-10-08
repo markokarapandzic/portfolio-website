@@ -1,6 +1,9 @@
+import { MAX_MOBILE_SCREEN_WIDTH, FIXED_NAVBAR_INACTIVE, LIGHT_THEME_CLASS } from './constants.js';
+import { changeMenuIconColor } from './fixed-nav.js';
+import { displayThemeIcon } from './dark-theme.js';
+
 // Event Cycle
-const MAX_MOBILE_SCREEN_WIDTH = 800;
-document.addEventListener('DOMContentLoaded', () => {
+export default () => document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('theme') !== null) {
     applyColorTheme();
   }

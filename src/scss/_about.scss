@@ -1,0 +1,51 @@
+.about-section {
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+.about-me-title {
+  margin-bottom: 5rem;
+}
+
+.about-text {
+  text-align: justify;
+}
+
+.tech-scroll-horizontal {
+  height: 150px;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  margin-top: 3rem;
+
+  img {
+    height: 100%;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@include tablet {
+  .about-section {
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .about-me-title {
+    margin-bottom: 1rem;
+  }
+  
+  .tech-scroll-horizontal {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    margin-top: 1rem;
+  }
+}

@@ -1,6 +1,11 @@
-// Dark Theme
+import { LIGHT_THEME_CLASS, FIXED_NAVBAR_ACTIVE, FIXED_NAVBAR_INACTIVE } from './constants.js';
+import { changeMenuIconColor } from './fixed-nav.js';
+
 const themeBtn = document.getElementById('theme-toggle');
-themeBtn.addEventListener('click', () => {
+const header = document.querySelector('.header');
+
+// Dark Theme
+export const themeBtnListener = () => themeBtn.addEventListener('click', () => {
   const rootTag = document.childNodes[1];
   rootTag.classList.toggle(LIGHT_THEME_CLASS);
 
@@ -14,7 +19,7 @@ themeBtn.addEventListener('click', () => {
   saveThemePreference(rootTag);
 });
 
-const displayThemeIcon = (rootTag) => {
+export const displayThemeIcon = (rootTag) => {
   if (rootTag.classList.contains(LIGHT_THEME_CLASS)) {
     themeBtn.classList.remove('fa-sun');
     themeBtn.classList.add('fa-moon');
@@ -24,7 +29,7 @@ const displayThemeIcon = (rootTag) => {
   }
 };
 
-const saveThemePreference = (rootTag) => {
+export const saveThemePreference = (rootTag) => {
   if (rootTag.classList.contains(LIGHT_THEME_CLASS)) {
     localStorage.setItem('theme', 'light');
   } else {

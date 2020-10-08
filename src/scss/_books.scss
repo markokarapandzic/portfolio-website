@@ -1,0 +1,128 @@
+books-section {
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+.books-header {
+  margin-bottom: 3rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 5rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.book-description {
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.more-btn {
+  height: 9rem;
+  width: 20rem;
+  border: 2px solid var(--clr-blue-light-accent);
+  border-radius: 5px;
+  color: var(--clr-blue-light-accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+
+  :hover {
+    animation: square-btn-animation 0.3s linear forwards;
+  }
+}
+
+@keyframes square-btn-animation {
+  0% {
+    background-color: transparent;
+    color: var(--clr-blue-light-accent);
+  }
+
+  100% {
+    background-color: var(--clr-blue-light-accent);
+    color: black;
+  }
+}
+
+@include tablet {
+  #books-btn-more {
+    display: none;
+  }
+
+  .books-section {
+    margin-bottom: 3rem;
+  }
+  
+  .books-header {
+    margin-bottom: 2rem;
+  }
+  
+  .books-header h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .book-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 400px;
+    width: initial;
+  }
+
+  .book:not(:last-child) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .book img {
+    display: block;
+    max-width: 230px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+  }
+
+  .book-description h3 {
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+}

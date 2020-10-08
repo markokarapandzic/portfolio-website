@@ -25,6 +25,6 @@ function loadImage(image) {
   image.src = src;
 };
 
-images.forEach(image => {
+export default () => images.forEach(image => {
   imgObserver.observe(image);
 });
