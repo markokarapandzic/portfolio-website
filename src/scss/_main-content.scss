@@ -1,0 +1,137 @@
+.main-container {
+  padding: 0 var(--base-padding);
+}
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 20vh;
+  height: 70vh;
+}
+
+.reach-me-btn {
+  height: 9rem;
+  width: 20rem;
+  border: 2px solid var(--clr-blue-light-accent);
+  border-radius: 5px;
+  color: var(--clr-blue-light-accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+
+  &:hover {
+    animation: square-btn-animation 0.3s linear forwards;
+  }
+}
+
+.title {
+  margin-bottom: 5rem;
+}
+
+.title-position {
+  color: var(--clr-grey-light);
+  font-weight: 400;
+}
+
+.title-description {
+  margin-bottom: 5rem;
+}
+
+.scroll-container {
+  width: 90vw;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+ 
+.scroll-gesture-img {
+  position: absolute;
+  height: 40px;
+  animation: scroll-gesture 3s infinite linear;
+}
+
+@keyframes scroll-gesture {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+}
+
+.intro-image-logo {
+  display: none;
+}
+
+@include tablet {
+  .main-container {
+    padding: 0 10%;
+  }
+
+  .intro-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    height: 95vh;
+    padding-top: 5%;
+  }
+
+  .reach-me-btn {
+    height: 3rem;
+    width: 7rem;
+    border: 2px solid var(--clr-blue-light-accent);
+    border-radius: 10px;
+    color: var(--clr-blue-light-accent);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+  }
+
+  .title h1 {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .title-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .intro-image-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .scroll-container {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+:root {
+  --clr-background: #121212;
+  --clr-grey-light: #B7B7B7;
+  --clr-blue-light-accent: #8AA3C5;
+  --clr-title: white;
+  --clr-icons: white;
+  --clr-menu-icon: white;
+  --clr-navbar-fixed: white;
+  --clr-navbar-links: black;
+  --clr-project-background: rgba(138, 163, 197, 0.15);
+  --clr-project-tag-background: rgba(138, 163, 197, 0.25);
+  --clr-project-tag-background-desktop: rgba(138, 163, 197, 0.15);
+  --clr-project-tag-text: #8AA3C5;
+  --clr-project-title: white;
+  --clr-project-description: #B7B7B7;
+  --clr-project-description-desktop: #B7B7B7;
+  --clr-project-icons: white;
+  --clr-project-icons-desktop: white;
+  --base-padding: 5%;
+  --transition: all 0.3s linear;
+}
+
+:root.light-theme {
+  --clr-background: white;
+  --clr-grey-light: #4a4a4a;
+  --clr-blue-light-accent: #8AA3C5;
+  --clr-title: black;
+  --clr-icons: black;
+  --clr-navbar-fixed: #121212;
+  --clr-menu-icon: black;
+  --clr-navbar-links: white;
+  --clr-project-background: #121212;
+  --clr-project-tag-background: white;
+  --clr-project-tag-background-desktop: rgba(138, 163, 197, 1);
+  --clr-project-tag-text: black;
+  --clr-project-tag-text-desktop: white;
+  --clr-project-title: black;
+  --clr-project-title-desktop: white;
+  --clr-project-description: black;
+  --clr-project-description-desktop: #B7B7B7;
+  --clr-project-icons: black;
+  --clr-project-icons-desktop: white;
+}

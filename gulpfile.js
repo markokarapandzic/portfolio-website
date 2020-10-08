@@ -1,4 +1,6 @@
-const { src, dest, series } = require('gulp');
+const { src, dest, series, watch } = require('gulp');
+const browserSync = require("browser-sync").create();
+const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const image = require('gulp-image');
@@ -7,6 +9,24 @@ const clean = require('gulp-clean');
 const uglify = require('gulp-uglify-es').default;
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+
+function compileSass() {
+  return src('./src/scss/**/*.scss')
+    .pipe(sass().on("error", sass.logError))
+    .pipe(dest('./src'))
+    .pipe(browserSync.stream());
+}
+
+function watchSass() {
+  browserSync.init({
+    server: {
+      baseDir: "./src",
+    },
+  });
+  watch("./src/scss/**/*.scss").on("change", compileSass);
+  watch("./src/*.html").on("change", browserSync.reload);
+  watch("./src/js/**/*.js").on("change", browserSync.reload);
+}
 
 function preBuild() {
   return src('./dist/', { read: false })
@@ -69,7 +89,9 @@ function bundleJS() {
   });
 }
 
-exports.default = series(
+exports.watch = watchSass;
+
+exports.build = series(
   preBuild,
   minifyCSS,
   bundleJS,
